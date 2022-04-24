@@ -2,8 +2,8 @@ import React from 'react'
 import Head from 'next/head';
 
 const SEO = ({
-	title = 'Shopperbird - The first on demand Slow Fashion Platform',
-	desc = 'We are Shopperbird, the first on demand Slow Fashion Platform based in London.',
+	title = 'Joy Agustian - My Inner Thought',
+	desc = 'Blank for now',
 }) => {
 	return (
 		<Head>

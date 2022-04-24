@@ -25,7 +25,7 @@ export default function About() {
   return (
     <main className={styles.home}>
       <SEO
-				title='Shopperbird | About'
+				title='Joy Agustian | About'
 				desc='Read the news from the editorial desk.'
 			/>
       <Header />

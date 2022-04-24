@@ -30,7 +30,7 @@ export default function Index({ posts }) {
     <>
       <Layout
         // type your page title and page description.
-        title="Shopperbird | Blog"
+        title="Joy Agustian | Blog"
         description="Blog"
       >
         <Container maxWidth="lg" className={classes.container}>

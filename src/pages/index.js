@@ -17,7 +17,7 @@ import SEO from '../data/SEO';
 const Home = () => {
 	return (
 		<div>
-			<SEO title='Shopperbird | Slow Fashion Platform' />
+			<SEO title='Joy Agustian | My Inner Thought' />
 			{/* <Head>
         <title>Shopperbird</title>
         <meta name="description" content="Slow Fashion App" />
