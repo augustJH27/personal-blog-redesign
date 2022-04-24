@@ -1,0 +1,48 @@
+@import '../styles/variabels';
+
+.process {
+	width: 100%;
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px auto auto;
+	align-items: center;
+
+	.image {
+		position: relative;
+		width: auto;
+		height: auto;
+	}
+
+	.title {
+		font-family: 'Cardo', serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 1rem;
+		line-height: 19px;
+		color: #fff;
+		margin-bottom: 21px;
+	}
+	.desc {
+		display: none;
+		font-family: 'Poppins', sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 180%;
+		color: #fff;
+	}
+}
+
+@media (min-width: 900px) {
+	.process {
+		grid-template-rows: 200px auto auto;
+
+		.desc {
+			display: block;
+		}
+		.image {
+			width: 200px;
+		}
+	}
+}

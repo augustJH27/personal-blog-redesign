@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+	--dark-blue: hsl(233, 26%, 24%);
+	--lime-green: hsl(136, 65%, 51%);
+	--bright-cyan: hsl(192, 70%, 51%);
+	--primary-black: #000;
+	--medium-emerald: #10b981;
+	--grayish-blue: hsl(233, 8%, 62%);
+	--light-grayish-blue: hsl(220, 16%, 96%);
+	--very-light-gray: hsl(0, 0%, 98%);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Lora', serif;
+	font-size: 18px;
+	scroll-behavior: smooth;
+}
+
+a {
+	color: inherit;
+	font-family: 'Cardo', serif;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.MuiTypography-displayBlock {
+	color: black !important;
+	font-family: 'Poppins' !important; 
+}
