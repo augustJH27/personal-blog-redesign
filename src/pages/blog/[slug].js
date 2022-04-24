@@ -57,7 +57,7 @@ const Blog = ({ post, morePosts }) => {
         coverImage={post?.fields.coverImage.fields.file.url}
       />
       <BlogBody content={post?.fields.content} />
-      <Container maxWidth="lg" style={{ marginTop: "8em" }}>
+      <Container maxWidth="lg" style={{ marginTop: "8em", marginBottom: '120px' }}>
         <Grid container direction="column" alignItems="center">
           <Grid item>
             <Typography

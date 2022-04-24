@@ -24,15 +24,15 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
 			<Header />
-			<Hero />
-			<About />
+			{/* <Hero /> */}
+			{/* <About /> */}
+			<EmptyBox />
 			<AnimationBoxRight />
 			<FirstSection />
 			<AnimationBoxFirst />
 			<SecondSection />
 			<AnimationBoxSecond />
 			<ThirdSection />
-			<EmptyBox />
 			<Footer />
 		</div>
 	);

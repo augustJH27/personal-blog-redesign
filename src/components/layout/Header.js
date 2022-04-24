@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     backgroundColor: theme.palette.primary.main,
+    // backgroundColor: '#1A91DAE2',
     padding: "0 6em",
   },
   link: {
@@ -139,7 +140,7 @@ const Header = () => {
                       fontFamily: "Cardo, serif",
                       color:
                         router.pathname === link
-                          ? "primary"
+                          ? "#3178C6E2"
                           : "#fff",
                       fontWeight: router.pathname === link && "bold",
                     }}
@@ -172,7 +173,7 @@ const Header = () => {
               margin: "0 auto",
               width: "100%",
               height: '80px',
-              padding: matches ? "16px" : "24px",
+              padding: matches ? "16px" : "48px",
             }}
           >
             <Link href="/">

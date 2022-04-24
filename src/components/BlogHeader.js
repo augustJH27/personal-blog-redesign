@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 10px 1px #b2b2b28f",
   },
   root: {
+    marginTop: '120px',
     maxWidth: "800px",
   },
   dateText: {
