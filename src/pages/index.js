@@ -2,8 +2,8 @@
 import React from 'react';
 import Header from '../components/layout/Header';
 // import Header from '../organisms/Header';
-import Hero from '../organisms/Hero';
-import About from '../organisms/About';
+// import Hero from '../organisms/Hero';
+// import About from '../organisms/About';
 import Footer from '../organisms/Footer';
 import AnimationBoxRight from '../atoms/AnimationBox/AnimationBoxRight';
 import AnimationBoxFirst from '../atoms/AnimationBox/AnimationBoxFirst';
