@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: `50px`,
     width: `50px`,
-    color: `#3178C6`,
+    color: `#000`,
     //hamburger icon color
     [theme.breakpoints.down("xs")]: {
       height: `40px`,

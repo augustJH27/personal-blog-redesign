@@ -68,7 +68,7 @@ const ArticleWrapper = styled.div`
 
 const StyledH1 = styled.h1`
 	font-weight: 300;
-	color: white;
+	color: black;
 	text-align: center;
 	@media (min-width: 864px) {
 		text-align: center;

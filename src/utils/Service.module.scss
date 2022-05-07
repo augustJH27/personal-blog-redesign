@@ -25,7 +25,7 @@
 			font-weight: 700;
 			font-size: 24px;
 			line-height: 23px;
-			color: #fff;
+			color: #000;
 			margin-bottom: 14px;
 		}
 		.subtitle {
@@ -36,7 +36,7 @@
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 180%;
-			color: #fff;
+			color: #000;
 			transition: height 2s linear;
 		}
 		.subtitle.expand {
@@ -52,7 +52,7 @@
 		padding: 20px 20px;
 		align-items: center;
 		justify-content: flex-end;
-		background: #000;
+		background: #fff;
 
 		p {
 			cursor: pointer;
@@ -63,7 +63,7 @@
 			font-weight: 700;
 			font-size: 1rem;
 			line-height: 20px;
-			color: #fff;
+			color: #000;
 		}
 	}
 }

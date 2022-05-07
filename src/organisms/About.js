@@ -33,9 +33,9 @@ export default About;
 
 const Container = styled.div`
 	width: 100vw;
-	padding: 24px 48px;
-  background: #000;
-  color: #fff;
+	padding: 60px 48px;
+  background: #fff;
+  color: #000;
 
 	/* display: flex;
 	flex-direction: column;

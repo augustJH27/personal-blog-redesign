@@ -12,7 +12,7 @@ import {
 const ButtonFooter = styled.button`
   border-radius: 4px;
   font-family: 'Cardo', serif;
-  background: #000;
+  background: #225389;
   padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
   color: #fff;
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
@@ -23,7 +23,7 @@ const ButtonFooter = styled.button`
 
   &:hover {
     transition: all 0.3s ease-out;
-    background: #3178C6;
+    background: #98bbe2;
     color: #fff;
   }
 
@@ -148,7 +148,7 @@ const FooterLink = styled(Link)`
   font-size: 12px;
 
   &:hover {
-    color: white;
+    color: #98bbe2;
     transition: 0.3s ease-out;
   }
 `;
@@ -183,16 +183,18 @@ const SocialLogo = styled(Link)`
 `;
 
 const SocialIcon = styled.img`
-  width: 36px;
+  width: 240px;
   height: 36px;
-  margin-right: 8px;
-  margin-bottom: 8px;
+
+  @media screen and (max-width: 820px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 `;
 
 const WebsiteRights = styled.small`
   color: #fff;
   font-size: 12px;
-  margin-bottom: 16px;
 `;
 
 const SocialIcons = styled.div`
@@ -203,8 +205,13 @@ const SocialIcons = styled.div`
 `;
 
 const SocialIconLink = styled.a`
-  color: #000;
+  color: #fff;
   font-size: 24px;
+
+  &:hover {
+    color: #98bbe2;
+    transition: 0.3s ease-out;
+  }
 `;
 
 
@@ -226,9 +233,7 @@ function Footer() {
           <FooterLinkItems>
             <FooterLinkTitle>About</FooterLinkTitle>
             <FooterLink href='/about' passHref>My Story</FooterLink>
-            <FooterLink href='/'>Benefits</FooterLink>
-            <FooterLink href='/'>Teams</FooterLink>
-            <FooterLink href='/'>Careers</FooterLink>
+            <FooterLink href='/'>Portfolio</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Blog</FooterLinkTitle>
@@ -238,14 +243,6 @@ function Footer() {
             <FooterLink href='/'>Review</FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
-        {/* <FooterLinksWrapper>
-        <FooterLinkItems>
-            <FooterLinkTitle>Legal</FooterLinkTitle>
-            <FooterLink href='/'>Terms & Conditions</FooterLink>
-            <FooterLink href='/'>Privacy Policy</FooterLink>
-            <FooterLink href='/'>Terms of Use</FooterLink>
-          </FooterLinkItems>
-        </FooterLinksWrapper> */}
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
@@ -253,7 +250,10 @@ function Footer() {
             <SocialIcon src="./assets/logoblck.svg"/>
             Shopperbird
           </SocialLogo> */}
-          <WebsiteRights>Shopperbird © 2021</WebsiteRights>
+          <WebsiteRights>Karma Agency © 2022</WebsiteRights>
+          <a href='/'>
+          <SocialIcon src="./images/27-raw-logo.svg" />
+          </a>
           <SocialIcons>
             <SocialIconLink
               href={

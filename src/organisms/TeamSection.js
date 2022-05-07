@@ -91,9 +91,9 @@ export default TeamSection;
 const Container = styled.div`
 	width: 100vw;
 	margin: 160px 0px;
-	padding: 24px 48px;
-  background: #000;
-  color: #fff;
+	padding: 60px 48px;
+  background: #fff;
+  color: #000;
 	justify-content: center;
 
 	/* display: flex;
@@ -114,7 +114,7 @@ const Container = styled.div`
 
 const StyledH1 = styled.h1`
 	font-weight: 400;
-	color: white;
+	color: black;
 	font-family: 'Cardo';
 	font-size: 64px;
 	text-align: center;

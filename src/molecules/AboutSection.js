@@ -51,7 +51,7 @@ const WrapperInfo = styled.div`
 const StyledH5 = styled.h5`
   font-weight: 500;
   font-size: 20px;
-  color: white;
+  color: black;
   text-align: center;
   font-family: 'Lora', serif;
   font-style: italic;
@@ -59,7 +59,7 @@ const StyledH5 = styled.h5`
 `;
 
 const StyledP = styled.p`
-  color: white;
+  color: black;
   text-align: center;
   font-weight: 500;
   font-size: 16px;
