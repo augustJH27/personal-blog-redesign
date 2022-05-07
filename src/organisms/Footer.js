@@ -224,41 +224,27 @@ function Footer() {
         <FooterLinksWrapper>
           <FooterLinkItems>
             <FooterLinkTitle>About</FooterLinkTitle>
-            <FooterLink href='/about' passHref>Our Story</FooterLink>
+            <FooterLink href='/about' passHref>My Story</FooterLink>
             <FooterLink href='/'>Benefits</FooterLink>
             <FooterLink href='/'>Teams</FooterLink>
             <FooterLink href='/'>Careers</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Blog</FooterLinkTitle>
-            <FooterLink href='/blog' passHref>News</FooterLink>
-            <FooterLink href='/'>Upcycle Fashion</FooterLink>
-            <FooterLink href='/'>Design</FooterLink>
-            <FooterLink href='/'>Sustainability Fashion</FooterLink>
+            <FooterLink href='/blog' passHref>Books</FooterLink>
+            <FooterLink href='/'>Short Story</FooterLink>
+            <FooterLink href='/'>Poem</FooterLink>
+            <FooterLink href='/'>Review</FooterLink>
           </FooterLinkItems>
-          {/* <FooterLinkItems>
-            <FooterLinkTitle>Legal</FooterLinkTitle>
-            <FooterLink href='/'>Terms & Conditions</FooterLink>
-            <FooterLink href='/'>Privacy Policy</FooterLink>
-            <FooterLink href='/'>Terms of Use</FooterLink>
-          </FooterLinkItems> */}
         </FooterLinksWrapper>
-        <FooterLinksWrapper>
+        {/* <FooterLinksWrapper>
         <FooterLinkItems>
             <FooterLinkTitle>Legal</FooterLinkTitle>
             <FooterLink href='/'>Terms & Conditions</FooterLink>
             <FooterLink href='/'>Privacy Policy</FooterLink>
             <FooterLink href='/'>Terms of Use</FooterLink>
           </FooterLinkItems>
-          {/* <FooterLinkItems>
-            <FooterLinkTitle>Blog</FooterLinkTitle>
-            <FooterLink href='/blog' passHref>News</FooterLink>
-            <FooterLink href='/'>Upcycle Fashion</FooterLink>
-            <FooterLink href='/'>Design</FooterLink>
-            <FooterLink href='/'>Sustainability Fashion</FooterLink>
-            <FooterLink href='/'>Influencer</FooterLink>
-          </FooterLinkItems> */}
-        </FooterLinksWrapper>
+        </FooterLinksWrapper> */}
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>

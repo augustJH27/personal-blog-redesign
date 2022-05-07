@@ -50,13 +50,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "auto",
     padding: 0,
     "&:hover": {
-      backgroundColor: "transparent",
+      backgroundColor: "#fff",
     },
   },
   drawerIcon: {
     height: `50px`,
     width: `50px`,
-    color: `#fff`,
+    color: `#000`,
+    //hamburger icon color
     [theme.breakpoints.down("xs")]: {
       height: `40px`,
       width: `40px`,
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     fontSize: "1.25em",
     fontFamily: 'Cardo',
-    color: 'white',
+    color: '#000',
     // color: theme.palette.secondary.main,
     // "&:hover": {
     //   color: theme.palette.info.main,
@@ -141,7 +142,7 @@ const Header = () => {
                       color:
                         router.pathname === link
                           ? "#3178C6E2"
-                          : "#fff",
+                          : "#000",
                       fontWeight: router.pathname === link && "bold",
                     }}
                   >
@@ -181,18 +182,6 @@ const Header = () => {
                 <Grid item>
                   <img src='/images/logoblck.svg' alt='Shopperbird logo' width='32' height='32'></img>
                   {/* you can also use your picture in here */}
-                  {/* <Typography
-                    style={{
-                      fontFamily: "Cardo, serif",
-                      color: "#fff",
-                      fontWeight: "bold",
-                      fontSize: "1.75em",
-                      position: "relative",
-                      zIndex: 100,
-                    }}
-                  >
-                    Shopperbird
-                  </Typography> */}
                 </Grid>
                 <Grid item>
                 </Grid>

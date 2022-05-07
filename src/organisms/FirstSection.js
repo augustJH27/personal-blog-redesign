@@ -88,6 +88,30 @@ const TextWrapper = styled.div`
 
 `;
 
+
+const ButtonCTA = styled.button`
+  border-radius: 4px;
+  font-family: 'Cardo', serif;
+  background: #000;
+  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+  color: #fff;
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  outline: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  width: 50%;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    background: #000;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 50%;
+  }
+`;
+
 // const LightContainer = styled.div`
 // 	height: 100%;
 // 	width: 100vw;

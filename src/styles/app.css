@@ -9,7 +9,7 @@
   --dark-blue: hsl(235, 16%, 14%);
 }
 body {
-  background-color: #000;
+  background-color: #fff;
   /* background: url('./images/pattern-hills.svg') bottom right 20% no-repeat,
     url('./images/bg-stars.svg');
   background-color: var(--dark-blue); */

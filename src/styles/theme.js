@@ -13,10 +13,10 @@ const theme = createTheme({
       blue: blue,
     },
     primary: {
-      main: mainBlack,
+      main: mainWhite,
     },
     secondary: {
-      main: mainWhite,
+      main: mainBlack,
     },
     info: {
       main: blue,
