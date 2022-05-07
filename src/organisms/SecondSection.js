@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const LightContainer = styled.div`
 	height: 100%;
 	width: 100vw;
-	background: #000;
+	background: #fff;
 	padding: 96px 48px;
 	
 	@media screen and (max-width: 768px){
@@ -19,7 +19,7 @@ const LightContainer = styled.div`
 `;
 
 const HeadingH3 = styled.h3`
-	color: #fff;
+	color: black;
 	font-size: 36px;
 	font-family: 'Cardo', serif;
 	font-weight: 400;

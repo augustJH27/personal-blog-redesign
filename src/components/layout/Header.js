@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   drawerIcon: {
     height: `50px`,
     width: `50px`,
-    color: `#000`,
+    color: `#3178C6`,
     //hamburger icon color
     [theme.breakpoints.down("xs")]: {
       height: `40px`,
@@ -101,7 +101,7 @@ const Header = () => {
                 className={classes.link}
                 style={{
                   fontWeight: router.pathname === link && "bold",
-                  borderBottom: router.pathname === link && "1px solid #757ce8",
+                  borderBottom: router.pathname === link && "1px solid #3178C6",
                 }}
               >
                 {name}
@@ -174,15 +174,16 @@ const Header = () => {
               margin: "0 auto",
               width: "100%",
               height: '80px',
-              padding: matches ? "16px" : "48px",
+              padding: matches ? "24px" : "48px",
             }}
           >
             <Link href="/">
               <Grid container wrap="nowrap" spacing={1} alignItems="flex-end">
                 <Grid item>
-                  <img src='/images/logoblck.svg' alt='Shopperbird logo' width='32' height='32'></img>
+                  <img src='/images/27-logo.svg' alt='Joy Agustian' width='auto' height='48'></img>
                   {/* you can also use your picture in here */}
                 </Grid>
+                <p>Joy Agustian</p>
                 <Grid item>
                 </Grid>
               </Grid>

@@ -23,7 +23,7 @@ const ButtonFooter = styled.button`
 
   &:hover {
     transition: all 0.3s ease-out;
-    background: #000;
+    background: #3178C6;
     color: #fff;
   }
 
@@ -33,7 +33,7 @@ const ButtonFooter = styled.button`
 `;
 
 const FooterContainer = styled.div`
-  background-color: #000;
+  background-color: #3178C6;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@ const FooterLinkItems = styled.div`
   text-align: left;
   width: 160px;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
 
   @media screen and (max-width: 420px) {
     margin: 0;
@@ -137,17 +137,18 @@ const FooterLinkTitle = styled.h3`
   font-family: 'Cardo', serif;
   font-size: 24px;
   font-weight: 700;
+  color: white;
 `;
 
 const FooterLink = styled(Link)`
-  color: #fff;
+  color: white;
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-family: 'Cardo', serif;
   font-size: 12px;
 
   &:hover {
-    color: #fff;
+    color: white;
     transition: 0.3s ease-out;
   }
 `;
@@ -171,7 +172,7 @@ const SocialMediaWrap = styled.div`
 `;
 
 const SocialLogo = styled(Link)`
-  color: #fff;
+  color: #3178C6;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -202,7 +203,7 @@ const SocialIcons = styled.div`
 `;
 
 const SocialIconLink = styled.a`
-  color: #fff;
+  color: #000;
   font-size: 24px;
 `;
 

@@ -9,7 +9,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #000;
+	background: #3178C6;
 
 	@media screen and (max-width: 480px) {
 		height: 150px;
