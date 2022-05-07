@@ -12,7 +12,7 @@ import { gsap } from 'gsap/dist/gsap';
 import Header from '../components/layout/Header';
 // import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
-import TeamSection from 'src/organisms/TeamSection';
+// import TeamSection from 'src/organisms/TeamSection';
 
 export default function About() {
   const handleScrollToMain = () => {
@@ -34,15 +34,15 @@ export default function About() {
           <section className={styles.container}>
             <section className={styles.heroInfo}>
               <h1 className={`${styles.heroTitle} hero-title`}>
-								Welcome to Shopperbird
+								Hello, Everyone!
 							</h1>
               {/* <section className='hero-title'>
                 <Button label={`KNOW MORE`} icon={true} types='third' action={handleScrollToMain} />
               </section> */}
             </section>
             <Image
-              src='/images/logoblck.svg'
-              alt='Shopperbird Black Logo'
+              src='/images/27-raw-logo.svg'
+              alt='Joy Agustian Logo'
               width={823}
               height={574}
               layout='responsive'
@@ -80,31 +80,6 @@ export default function About() {
             <h2 className={`${styles.title} section-2`}>
               <span className={styles.titleDecoration}>02</span>What We Make
 						</h2>
-            {/* <p className={`${styles.subtitle} section-2`}>
-              Ton of projects crafted by young and talented designers
-						</p>
-            <section className={`${styles.services}`}>
-              <section className='section-2'>
-                <Service
-                  src='/images/03.jpg'
-                  alt='Design'
-                  width={518}
-                  height={320}
-                  title='Design'
-                  desc='The right design will make you easier to achieve your goals in the future. By considering the ecosystem and climate change, you can create a website or applications that not only work but are also  comfortable and friendly for the users'
-                />
-              </section>
-              <section className='section-2'>
-                <Service
-                  src='/images/05.jpg'
-                  alt='Collect The Materials'
-                  width={518}
-                  height={320}
-                  title='Collect The Materials'
-                  desc={'The right design will make you easier to achieve your goals in the future. By considering the ecosystem and climate change, you can create a website or applications that not only work but are also  comfortable and friendly for the users'}
-                />
-              </section>
-            </section> */}
           </section>
         </Wrapper>
       </section>
@@ -139,8 +114,7 @@ export default function About() {
                   height={181}
                   title='Design'
                   desc='To be able to solve design problems, we need to understand you and your customers, find out what holding you back, and do research to find the best solution for you.'
-                  // desc='Our design has your users in mind, the humans behind the screen. We follow User-centered Design thinking to make sure every design provides the best User Experience possible.'
-                />
+                  />
               </section>
               <section className='section-3'>
                 <Process
@@ -150,7 +124,6 @@ export default function About() {
                   height={181}
                   title='Tailoring'
                   desc='To be able to solve design problems, we need to understand you and your customers, find out what holding you back, and do research to find the best solution for you.'
-                  // desc='We will bring life to the design we create together, with the latest web technology that not only fast and secure but also reliable. '
                 />
               </section>
               <section className='section-3'>
@@ -161,15 +134,12 @@ export default function About() {
                   height={181}
                   title='Deliver'
                   desc='To be able to solve design problems, we need to understand you and your customers, find out what holding you back, and do research to find the best solution for you.'
-                  // desc='To make sure that we’ve hit all the checkmarks, we love to do user testing with some of your potential customers. This will help us determine what’s good and what’s can be improved.'
-                />
+                  />
               </section>
             </section>
           </section>
         </Wrapper>
-
-        <TeamSection />
-        
+        {/* <TeamSection /> */}
         <Footer />
       </section>
     </main>
