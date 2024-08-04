@@ -76,7 +76,7 @@ export default function Post({
         <CardHeader
           // avatar={
           //   <Avatar
-          //     aria-label="avator image"
+          //     aria-label="avatar image"
           //     className={classes.avatar}
           //     style={{
           //       backgroundImage: `url(${authorImage})`,

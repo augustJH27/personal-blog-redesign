@@ -271,7 +271,7 @@ function Footer() {
             </SocialIconLink>
             <SocialIconLink
               href={
-                'https://twitter.com/Shopperbird1'
+                'https://twitter.com/WeLivein1'
               }
               rel='noopener noreferrer'
               target='_blank'

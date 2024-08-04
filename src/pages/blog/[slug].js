@@ -49,8 +49,8 @@ const Blog = ({ post, morePosts }) => {
       <BlogHeader
         title={post?.fields.title}
         subtitle={post?.fields.subTitle}
-        authorName={post?.fields.author.fields.name}
-        authorImage={post?.fields.author.fields.image}
+        // authorName={post?.fields.author.fields.author}
+        // authorImage={post?.fields.author.fields.image}
         // authorImage={post?.fields.author.fields.image.fields.file.url}
         slug={post?.fields.slug}
         date={post?.fields.date}
@@ -96,8 +96,8 @@ const Blog = ({ post, morePosts }) => {
                 <MorePost
                   title={fields.title}
                   subtitle={fields.subTitle}
-                  authorName={fields.author.fields.name}
-                  authorImage={post?.fields.author.fields.image}
+                  // authorName={fields.author.fields.author}
+                  // authorImage={post?.fields.author.fields.image}
                   // authorImage={fields.author.fields.image.fields.file.url}
                   slug={fields.slug}
                   date={fields.date}

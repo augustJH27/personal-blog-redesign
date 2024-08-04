@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
@@ -92,7 +92,7 @@ function TextField(props) {
             {
               [classes.inputBorder]: !noBorder,
             },
-            InputPropsClassesInput,
+            InputPropsClassesInput
           ),
           disabled: classes.disabled,
           ...InputPropsClassesOther,
@@ -118,27 +118,12 @@ function TextField(props) {
 }
 
 TextField.propTypes = {
-  /**
-   * Override or extend the styles applied to the component.
-   */
   classes: PropTypes.object.isRequired,
-  /**
-   * Props applied to the [`InputLabel`](/api/input-label/) element.
-   */
   InputLabelProps: PropTypes.object,
-  /**
-   * Props applied to the Input element.
-   * It will be a [`FilledInput`](/api/filled-input/),
-   * [`OutlinedInput`](/api/outlined-input/) or [`Input`](/api/input/)
-   * component depending on the `variant` prop value.
-   */
   InputProps: PropTypes.object,
   noBorder: PropTypes.bool,
-  /**
-   * Props applied to the [`Select`](/api/select/) element.
-   */
   SelectProps: PropTypes.object,
-  size: PropTypes.oneOf(['large', 'medium', 'small', 'xlarge']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
 };
 
 export default withStyles(styles)(TextField);

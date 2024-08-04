@@ -44,8 +44,8 @@ export default function Index({ posts }) {
                   <Post
                     title={fields.title}
                     subtitle={fields.subTitle}
-                    authorName={fields.author.fields.name}
-                    authorImage={fields.author.fields.image}
+                    // authorName={fields.author.fields.name}
+                    // authorImage={fields.author.fields.image}
                     // authorImage={fields.author.fields.image.fields.file.url}
                     slug={fields.slug}
                     date={fields.date}
