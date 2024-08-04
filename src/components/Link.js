@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
@@ -11,7 +10,7 @@ const NextComposed = React.forwardRef(function NextComposed(props, ref) {
 
   return (
     <NextLink href={href} as={as}>
-      <a ref={ref} {...other} />
+      <a ref={ref} {...other} /> {/* Use <a> instead of <Link> */}
     </NextLink>
   );
 });
@@ -22,8 +21,6 @@ NextComposed.propTypes = {
   prefetch: PropTypes.bool,
 };
 
-// A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
 function Link(props) {
   const {
     href,
@@ -35,7 +32,10 @@ function Link(props) {
   } = props;
 
   const router = useRouter();
-  const pathname = typeof href === "string" ? href : href.pathname;
+  
+  // Handle href as a string or object
+  const pathname = typeof href === "string" ? href : (href && href.pathname) || '';
+  
   const className = clsx(classNameProps, {
     [activeClassName]: router.pathname === pathname && activeClassName,
   });

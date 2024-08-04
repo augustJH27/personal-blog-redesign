@@ -25,7 +25,7 @@ const ComingSoon = () => {
   return (
     <div className="app-container">
 			<SEO 
-			title='Shopperbird | Coming Soon'
+			title='Joy Agustian | Coming Soon'
 			desc='Our App will be available by the end of the year. Please subscribe yourself and stay tune.' />
 			<Header />
       <div className="container">

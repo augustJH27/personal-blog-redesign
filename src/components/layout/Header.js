@@ -38,7 +38,6 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    // marginBottom: `5em`,
     [theme.breakpoints.down("md")]: {
       marginBottom: "80px",
     },
@@ -93,7 +92,7 @@ const Header = () => {
 
   const tabs = (
     <>
-      <Grid container justify="flex-end" spacing={4}>
+      <Grid container justifyContent="center" spacing={4}>
         {path.map(({ name, link }) => (
           <Grid item key={link}>
             <Link href={link}>

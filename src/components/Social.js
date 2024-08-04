@@ -46,7 +46,7 @@ const Social = ({ color }) => {
     </Grid> */
   }
   return (
-    <Grid item container spacing={2} justify="center">
+    <Grid item container spacing={2} justifyContent="center">
       <Grid
         item
         component={"a"}

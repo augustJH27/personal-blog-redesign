@@ -246,10 +246,6 @@ function Footer() {
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          {/* <SocialLogo href='/'>
-            <SocialIcon src="./assets/logoblck.svg"/>
-            Shopperbird
-          </SocialLogo> */}
           <WebsiteRights>Karma Agency © 2022</WebsiteRights>
           <a href='/'>
           <SocialIcon src="./images/27-raw-logo.svg" />
@@ -266,22 +262,12 @@ function Footer() {
             </SocialIconLink>
             <SocialIconLink 
               href={
-                'https://www.instagram.com/shopperbird.app/?hl=en'
+                'https://www.instagram.com/_realbitj/?hl=en'
               }
               rel='noopener noreferrer'
               target='_blank'
               aria-label='Instagram'>
               <FaInstagram />
-            </SocialIconLink>
-            <SocialIconLink
-              href={
-                'https://www.youtube.com/channel/UC9T1e-cwDhgeXeVM2YcErFw'
-              }
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <FaYoutube />
             </SocialIconLink>
             <SocialIconLink
               href={

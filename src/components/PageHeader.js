@@ -22,59 +22,10 @@ const PageHeader = () => {
   return (
     <Grid container direction="column" className={classes.container}>
       <Grid item>
-        <Typography variant="h1" gutterBottom align="center">
+        <Typography variant="h3" gutterBottom align="center">
           My Inner Thoughts
         </Typography>
       </Grid>
-
-      {/* <Grid item>
-        <Typography
-          variant="body1"
-          color="#000"
-          component="p"
-          align="center"
-        >
-          Read the most favourable stories
-          <br /> You can see the code&#8594;{" "}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://github.com/SatoruAkiyama/blog-with-nextjs-and-contentful"
-            className={classes.link}
-          >
-            here
-          </a>
-          .<br /> How you make a blog&#8594;{" "}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://satoruakiyama.com/blog/building-blog-with-nextjs-and-contentful-en"
-            className={classes.link}
-          >
-            English
-          </a>{" "}
-          ,{" "}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://satoruakiyama.com/blog/building-blog-with-nextjs-and-contentful-ja"
-            className={classes.link}
-          >
-            Japanese
-          </a>
-          .<br />
-          Or I can make your blog. Contact me from{" "}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://satoruakiyama.com/contact"
-            className={classes.link}
-          >
-            here
-          </a>
-          .
-        </Typography>
-      </Grid> */}
     </Grid>
   );
 };

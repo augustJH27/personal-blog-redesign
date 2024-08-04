@@ -1,8 +1,8 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
-
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "./Link";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -52,9 +52,9 @@ const BlogBody = ({ content }) => {
         const { uri } = node.data;
         const { value } = node.content[0];
         return (
-          <a target="_blank" rel="noreferrer noopener" href={uri}>
+          <Link target="_blank" rel="noreferrer noopener" href={uri}>
             {value}
-          </a>
+          </Link>
         );
       },
     },

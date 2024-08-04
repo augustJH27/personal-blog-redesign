@@ -1,9 +1,7 @@
-// add pages which you want to the array.
-// and make the file in the page folder.
-
 export const routes = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Blog", link: "/blog" },
-  // { name: "path name", link: "link url" }, like this
+  {name: "Home", link: "/"},
+  {name: "Blog", link: "/blog" },
+  {name: "Reviews", link: "/reviews" },
+  {name: "Books", link: "/books"},
+    // { name: "About", link: "/about" },
 ];

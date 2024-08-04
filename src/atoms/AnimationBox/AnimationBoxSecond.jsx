@@ -38,7 +38,7 @@ const AnimationBoxRight = () => {
 		<div>
 			<Container id='animation-box' data-aos='fade-right' data-aos-duration='800'>
 				<Text>
-					What next?
+					CTA Breaker 2
 				</Text>
 			</Container>
 		</div>

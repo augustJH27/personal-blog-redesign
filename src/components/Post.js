@@ -82,7 +82,7 @@ export default function Post({
           <Typography variant="h2" gutterBottom>
             {title}
           </Typography>
-          <Typography className={classes.paragraphText} variant="p" color="#000" component="p">
+          <Typography className={classes.paragraphText} variant="body2" color="textPrimary" component="p">
             {subtitle.length > 170 ? subtitle.substr(0, 170) + "..." : subtitle}
           </Typography>
         </CardContent>

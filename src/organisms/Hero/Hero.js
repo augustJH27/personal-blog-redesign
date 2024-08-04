@@ -21,7 +21,7 @@ export const Header = styled.h1`
 
 export const Arrow = styled(AiOutlineArrowDown)`
   font-size: 14rem;
-  margin-top: 4rem;
+  // margin-top: 4rem;
   color: #000;
 `;
 
@@ -31,19 +31,17 @@ export const PageContainer = styled.div`
   background-color: #000;
   /* background-image: url('../../../public/assets/image/cherry.jpg'); */
   background-size: cover;
-  background-position: 0% 50%;
+  background-position: 0% 0%;
 `;
 
 export default function Hero() {
   return (
     <Wrapper>
       <PageContainer>
-      {/* <div className={styles.container}> */}
         <Container>
           <Header>Creating Since The Start</Header>
         </Container>
         </PageContainer>
-      {/* </div> */}
     </Wrapper>
   );
 }

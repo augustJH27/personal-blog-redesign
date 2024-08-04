@@ -7,6 +7,8 @@ import {
   WhatsappIcon,
   LineShareButton,
   LineIcon,
+  TelegramShareButton,
+  TelegramIcon,
 } from "react-share";
 
 const ShareButton = ({ url }) => (
@@ -27,6 +29,12 @@ const ShareButton = ({ url }) => (
     >
       <WhatsappIcon size="32px" round />
     </WhatsappShareButton>
+    <TelegramShareButton
+      url={url}
+      style={{ marginLeft: `15px`, outline: "none" }}
+    >
+      <TelegramIcon size="32px" round />
+    </TelegramShareButton>
     <LineShareButton url={url} style={{ marginLeft: `15px`, outline: "none" }}>
       <LineIcon size="32px" round />
     </LineShareButton>

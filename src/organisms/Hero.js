@@ -1,4 +1,3 @@
-import ReactStoreBadges from 'react-store-badges';
 import styled from 'styled-components';
 
 const HeroContainer = styled.div`
@@ -100,24 +99,10 @@ const HeroSection = () => {
         <VideoBg src='/images/video.mp4' autoPlay loop muted type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroHeading>Uniqueness with just 3 clicks</HeroHeading>
+        <HeroHeading>Welcome to my page</HeroHeading>
         <HeroP>
-        #OwnYourStyle or someone else will
+        Have a seat and enjoy my story
         </HeroP>
-        <ButtonWrapper>
-          <ReactStoreBadges 
-          platform={'ios'}
-          url={'https://itunes.apple.com'}
-          locale={'en-us'}
-          target='_blank'
-          />
-          <ReactStoreBadges 
-          platform={'android'}
-          url={'https://play.google.com'}
-          locale={'en-us'}
-          target='_blank'
-          />
-        </ButtonWrapper>
       </HeroContent>
     </HeroContainer>
   )

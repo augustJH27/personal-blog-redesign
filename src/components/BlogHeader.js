@@ -63,10 +63,10 @@ const BlogHeader = ({
           </Grid> */}
           <Grid item container direction="column">
             <Grid item>
-              <Typography className={classes.blogBody} variant='h2'>{authorName}</Typography>
+              <Typography className={classes.blogBody} variant="h2">{authorName}</Typography>
             </Grid>
             <Grid item>
-              <Typography className={classes.dateText} color="#000">
+              <Typography className={classes.dateText} color="textPrimary">
                 {moment(date).format("MMMM Do YYYY")}
               </Typography>
             </Grid>
@@ -76,7 +76,7 @@ const BlogHeader = ({
           <img src={coverImage} style={{ height: "auto", width: "100%" }} />
         </Grid>
         <Grid item>
-          <Typography variant="h2">{subtitle}</Typography>
+          <Typography variant="body1">{subtitle}</Typography>
         </Grid>
       </Grid>
     </Container>

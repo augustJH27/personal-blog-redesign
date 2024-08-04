@@ -64,10 +64,10 @@ export default function Post({
       <Card className={classes.root}>
         <CardMedia className={classes.media} image={coverImage} title={title} />
         <CardContent>
-          <Typography variant="h2" gutterBottom>
+          <Typography variant="body1" gutterBottom>
             {title}
           </Typography>
-          <Typography className={classes.paragraphText} variant="p" color="#000" component="p">
+          <Typography className={classes.paragraphText} variant="body1" color="textPrimary" component="p">
             {subtitle.length > 80 ? subtitle.substr(0, 80) + "..." : subtitle}
           </Typography>
         </CardContent>

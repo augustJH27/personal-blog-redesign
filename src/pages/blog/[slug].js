@@ -44,7 +44,7 @@ const Blog = ({ post, morePosts }) => {
       title={post?.fields.title}
       description={post?.fields.subTitle}
       ogImage={post?.fields.coverImage.fields.file.url}
-      url={`https://shopperbird.vercel.app/blog/${post?.fields.slug}`}
+      url={`https://joyagustian.vercel.app/blog/${post?.fields.slug}`}
     >
       <BlogHeader
         title={post?.fields.title}
@@ -72,7 +72,7 @@ const Blog = ({ post, morePosts }) => {
               - Share -
             </Typography>
             <ShareButton
-              url={`https://shopperbird.vercel.app/blog/${post?.fields.slug}`}
+              url={`https://joyagustian.vercel.app/blog/${post?.fields.slug}`}
             />
           </Grid>
         </Grid>
@@ -89,7 +89,7 @@ const Blog = ({ post, morePosts }) => {
         >
           - Recent Entries -
         </Typography>
-        <Grid container spacing={4} justify="center">
+        <Grid container spacing={4} justifyContent="center">
           {morePosts?.map(({ fields }) => (
             <Grid item key={fields.slug} xs={12} md={4}>
               <Grid container>

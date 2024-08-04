@@ -44,7 +44,7 @@ export const ContainerBlack = styled.div`
 	color: #fff;
 
 	@media screen and (max-width: 480px) {
-		padding: 56px 24px;
+		padding: 0 24px;
 	}
 `;
 
