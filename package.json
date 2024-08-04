@@ -32,5 +32,8 @@
     "sass": "^1.43.4",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
