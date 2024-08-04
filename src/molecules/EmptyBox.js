@@ -20,7 +20,7 @@ const TypicalText = styled.p`
 	color: white;
 	font-size: 24px;
 	text-align: center;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 500;
 `;
 

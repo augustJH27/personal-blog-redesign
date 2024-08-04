@@ -177,9 +177,6 @@ const Header = () => {
                     height='48'
                   />
                 </Grid>
-                <Grid item>
-                  <Typography variant="h6" component="p">Joy Agustian</Typography>
-                </Grid>
               </Grid>
             </Link>
             {matches ? drawer : tabs}

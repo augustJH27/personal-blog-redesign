@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
   paragraphText: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: "Raleway, sans-serif",
     fontSize: '16px',
     lineHeight: '2',
     color: 'black',

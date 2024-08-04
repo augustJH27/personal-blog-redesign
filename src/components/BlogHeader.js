@@ -10,30 +10,31 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 10px 1px #b2b2b28f",
   },
   root: {
-    marginTop: '120px',
     maxWidth: "800px",
+    padding: "20px",
   },
   dateText: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: "Raleway, sans-serif",
     marginTop: '12px',
     fontSize: '20px',
   },
   blogBody: {
-    marginTop: "2rem",
+    textAlign: 'justify',
     "& p": {
       ...theme.typography.body1,
       marginTop: '8px',
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
+      marginBottom: '12px'
     },
     "& h1, h2, h3, h4, h5": {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
       fontSize: "1.5rem",
-      marginBottom: "0",
+      marginBottom: "12px",
       marginTop: "2rem",
     },
     "& a": {
       color: theme.palette.info.main,
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
     },
   },
 }));

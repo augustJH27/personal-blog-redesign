@@ -5,6 +5,7 @@ import AnimationBoxFirst from '../atoms/AnimationBox/AnimationBoxFirst';
 import AnimationBoxSecond from '../atoms/AnimationBox/AnimationBoxSecond';
 import SEO from '../data/SEO';
 
+
 const Home = () => {
 	return (
 		<div>

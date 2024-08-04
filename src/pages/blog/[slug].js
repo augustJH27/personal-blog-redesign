@@ -64,7 +64,7 @@ const Blog = ({ post, morePosts }) => {
               align="center"
               gutterBottom
               style={{
-                fontFamily: 'Poppins, sans-serif',
+                fontFamily: "Raleway, sans-serif",
                 fontSize: "1.5rem",
                 fontWeight: "bold",
               }}
@@ -80,7 +80,7 @@ const Blog = ({ post, morePosts }) => {
           align="center"
           gutterBottom
           style={{
-            fontFamily: 'Poppins, sans-serif',
+            fontFamily: "Raleway, sans-serif",
             fontSize: "1.5rem",
             fontWeight: "bold",
             margin: "3em 0 1.5em",

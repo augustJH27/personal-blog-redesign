@@ -32,13 +32,13 @@ const theme = createTheme({
       },    
     },
     h2: {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
       fontSize: "1.25rem",
       fontWeight: 500,
       lineHeight: '1.7',
     },
     p: {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
     },
     h3: {
       fontFamily: 'Cardo, serif',
@@ -50,7 +50,7 @@ const theme = createTheme({
       },
     },
     a: {
-      fontFamily: 'Poppins, sans-serif',
+      fontFamily: "Raleway, sans-serif",
       color: mainBlack,
     },
   },

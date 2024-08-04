@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const StyledBtn = styled.button`
 	color: white;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 	border-radius: 20px;
 	border: solid 2px white;

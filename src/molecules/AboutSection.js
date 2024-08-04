@@ -63,7 +63,7 @@ const StyledP = styled.p`
   text-align: center;
   font-weight: 500;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Raleway", sans-serif;
 
 	@media (min-width: 864px) {
     /* padding-left: 0; */

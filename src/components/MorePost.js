@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
   paragraphText: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: "Raleway, sans-serif",
     fontSize: '16px',
     fontWeight: '400',
     lineHeight: '2',
@@ -67,12 +67,11 @@ export default function Post({
           <Typography variant="body1" gutterBottom>
             {title}
           </Typography>
-          <Typography className={classes.paragraphText} variant="body1" color="textPrimary" component="p">
+          <Typography className={classes.paragraphText} variant="h2" color="textPrimary" component="p">
             {subtitle.length > 80 ? subtitle.substr(0, 80) + "..." : subtitle}
           </Typography>
         </CardContent>
-        {/* if you don't need author section, delete this block */}
-        {/* author */}
+
         <CardHeader
           // avatar={
           //   <Avatar
@@ -83,10 +82,9 @@ export default function Post({
           //     }}
           //   />
           // }
-          // title={authorName}
-          // subheader={moment(date).format("MMMM Do YYYY")}
+          title={authorName}
+          subheader={moment(date).format("MMMM Do YYYY")}
         />
-        {/* author */}
       </Card>
     </Link>
   );
