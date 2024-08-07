@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: "800px",
     padding: "20px",
+    marginTop: "64px",
   },
   dateText: {
     fontFamily: "Raleway, sans-serif",

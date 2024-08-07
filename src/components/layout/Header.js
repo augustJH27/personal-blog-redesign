@@ -167,7 +167,7 @@ const Header = () => {
               padding: matches ? '24px' : '48px',
             }}
           >
-            <Link href="/">
+            <Link href="/home">
               <Grid container wrap="nowrap" spacing={1} alignItems="flex-end">
                 <Grid item>
                   <img
