@@ -1,11 +1,8 @@
 import Post from '../components/Post';
 import Layout from '../components/layout/Layout';
 import PageHeader from '../components/PageHeader';
-
 import { makeStyles } from "@material-ui/core/styles";
-
 import { Container, Grid } from "@material-ui/core";
-
 import { getAllPosts } from '../lib/index';
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +41,7 @@ export default function Index({ posts }) {
                   <Post
                     title={fields.title}
                     subtitle={fields.subTitle}
-                    // authorName={fields.author.fields.name}
+                    authorName={fields.author.fields.name}
                     // authorImage={fields.author.fields.image}
                     // authorImage={fields.author.fields.image.fields.file.url}
                     slug={fields.slug}

@@ -28,7 +28,7 @@ const Layout = ({ children, title, description, ogImage, url }) => {
         />
         <meta
           property="og:url"
-          content={url ? url : "https://shopperbird.vercel.app/"}
+          content={url ? url : "https://joyagustian.vercel.app/"}
           key="og:url"
         />
         <meta

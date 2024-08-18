@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dateText: {
     fontFamily: "Raleway, sans-serif",
-    marginTop: '12px',
-    fontSize: '20px',
+    fontSize: '16px',
   },
   blogBody: {
     textAlign: 'justify',
@@ -56,13 +55,13 @@ const BlogHeader = ({
           <Typography variant="h3">{title}</Typography>
         </Grid>
         <Grid item container wrap="nowrap" alignItems="center" spacing={3}>
-          {/* <Grid item>
+          <Grid item>
             <Avatar
               aria-label="avator image"
               className={classes.avatar}
               src={authorImage}
             />
-          </Grid> */}
+          </Grid>
           <Grid item container direction="column">
             <Grid item>
               <Typography className={classes.blogBody} variant="h2">{authorName}</Typography>

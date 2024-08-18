@@ -1,46 +1,57 @@
 import React, { useEffect, useRef, useState } from 'react';
-
 import CountDownCard from './CountDownCard';
 
 const CountDownTimer = () => {
-  //card ref
+
   const SecondsCardRef = useRef(null);
   const MinutesCardRef = useRef(null);
   const HoursCardRef = useRef(null);
   const DaysCardRef = useRef(null);
-  //state
-  const [days, setDays] = useState(39);
+
+  const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    seconds === 0 && setSeconds(59);
-    minutes === 0 && setMinutes(59);
-    if (seconds > 0) {
-      setTimeout(() => {
-        setSeconds(seconds - 1);
-        SecondsCardRef.current.classList.toggle('rotate');
-      }, 1000);
-    }
-    if (seconds === 0 && minutes > 0) {
-      setMinutes(minutes - 1);
-      MinutesCardRef.current.classList.toggle('rotate');
-    }
-  }, [seconds, minutes]);
-  useEffect(() => {
-    hours === 0 && setHours(23);
-    if (minutes === 0 && hours > 0) {
-      setHours(hours - 1);
-      HoursCardRef.current.classList.toggle('rotate');
-    }
-  }, [minutes, hours]);
-  useEffect(() => {
-    days === 39 && setDays(38);
-    hours === 0 &&
-      setDays(days - 1) &&
-      DaysCardRef.current.classList.toggle('rotate');
-  }, [hours, days]);
+    // Target date: November 30, 2024
+    const targetDate = new Date('2024-11-30T00:00:00.000Z'); // Note the 'Z' at the end to specify UTC time
+
+    const updateTimer = () => {
+      const now = new Date();
+      const timeRemaining = targetDate.getTime() - now.getTime(); // Use getTime() to get the timestamp in milliseconds
+
+      if (timeRemaining > 0) {
+        const calculatedDays = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const calculatedHours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+        const calculatedMinutes = Math.floor((timeRemaining / 1000 / 60) % 60);
+        const calculatedSeconds = Math.floor((timeRemaining / 1000) % 60);
+
+        setDays(calculatedDays);
+        setHours(calculatedHours);
+        setMinutes(calculatedMinutes);
+        setSeconds(calculatedSeconds);
+      } else {
+        setDays(0);
+        setHours(0);
+        setMinutes(0);
+        setSeconds(0);
+      }
+    };
+
+    // Initial call to set the countdown
+    updateTimer();
+
+    // Update the countdown every second
+    const intervalId = setInterval(() => {
+      updateTimer();
+      SecondsCardRef.current.classList.toggle('rotate');
+    }, 1000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="countdown__container">
       <CountDownCard

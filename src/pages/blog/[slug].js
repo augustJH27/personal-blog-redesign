@@ -1,15 +1,11 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-
 import Layout from '../../components/layout/Layout';
 import BlogHeader from '../../components/BlogHeader';
 import BlogBody from '../../components/BlogBody';
 import MorePost from '../../components/MorePost';
 import ShareButton from '../../components/ShareButton';
-
-
 import { getPostBySlug, getMorePosts, getAllPostsWithSlug } from '../../lib/index';
-
 import { Container, Grid, Typography } from "@material-ui/core";
 
 export async function getStaticPaths() {
@@ -49,8 +45,7 @@ const Blog = ({ post, morePosts }) => {
       <BlogHeader
         title={post?.fields.title}
         subtitle={post?.fields.subTitle}
-        // authorName={post?.fields.author.fields.author}
-        // authorImage={post?.fields.author.fields.image}
+        authorName={post?.fields.author.fields.name}
         // authorImage={post?.fields.author.fields.image.fields.file.url}
         slug={post?.fields.slug}
         date={post?.fields.date}
@@ -96,8 +91,7 @@ const Blog = ({ post, morePosts }) => {
                 <MorePost
                   title={fields.title}
                   subtitle={fields.subTitle}
-                  // authorName={fields.author.fields.author}
-                  // authorImage={post?.fields.author.fields.image}
+                  authorName={fields.author.fields.name}
                   // authorImage={fields.author.fields.image.fields.file.url}
                   slug={fields.slug}
                   date={fields.date}

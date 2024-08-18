@@ -6,7 +6,7 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-// import Avatar from "@material-ui/core/Avatar";
+import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
@@ -60,30 +60,23 @@ export default function Post({
   return (
     <Link href="/blog/[slug]" as={`/blog/${slug}`}>
       <Card className={classes.root} style={{color: 'black'}}>
-        {/* if you don't need author section, delete this block */}
-        {/* author */}
-        <CardHeader
-          // avatar={
-          //   <Avatar
-          //     aria-label="avatar image"
-          //     className={classes.avatar}
-          //     style={{
-          //       backgroundImage: `url(${authorImage})`,
-          //     }}
-          //   />
-          // }
-          // title={authorName}        
-          subheader={moment(date).format("MMMM Do YYYY")} color='black'
-        />
-
-        {/* author */}
+      {/* <CardHeader avatar={
+            <Avatar aria-label="avatar image"
+              className={classes.avatar}
+              style={{ backgroundImage: `url(${authorImage})`,
+              }}
+            />
+          }
+          title={authorName} variant='body1' color='textPrimary'      
+          subheader={moment(date).format("MMMM Do YYYY")}
+        /> */}
         <CardMedia className={classes.media} image={coverImage} title={title} />
         <CardContent>
           <Typography variant="h2" gutterBottom>
-            {title}
+            {title.length > 25 ? title.substr(0, 25) + "..." : title}
           </Typography>
-          <Typography className={classes.paragraphText} variant="body2" color="textPrimary" component="p">
-            {subtitle.length > 170 ? subtitle.substr(0, 170) + "..." : subtitle}
+          <Typography className={classes.paragraphText} variant="body1" color="textPrimary" component="p">
+            {subtitle.length > 72 ? subtitle.substr(0, 72) + "..." : subtitle}
           </Typography>
         </CardContent>
       </Card>

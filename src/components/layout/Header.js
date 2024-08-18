@@ -77,7 +77,6 @@ const Header = () => {
 
   const path = routes;
 
-  // iOS check moved to useEffect for consistency
   const [iOS, setIOS] = useState(false);
 
   useEffect(() => {
@@ -167,7 +166,7 @@ const Header = () => {
               padding: matches ? '24px' : '48px',
             }}
           >
-            <Link href="/home">
+            <Link href="/">
               <Grid container wrap="nowrap" spacing={1} alignItems="flex-end">
                 <Grid item>
                   <img
