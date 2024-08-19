@@ -35,6 +35,11 @@ const Blog = ({ post, morePosts }) => {
     return <ErrorPage statusCode={404} />;
   }
 
+  // Extract image URL from the array
+  const authorImageUrl = post?.fields.author.fields.image.length > 0 
+    ? post.fields.author.fields.image[0].fields.file.url
+    : null;
+
   return (
     <Layout
       title={post?.fields.title}
@@ -46,7 +51,7 @@ const Blog = ({ post, morePosts }) => {
         title={post?.fields.title}
         subtitle={post?.fields.subTitle}
         authorName={post?.fields.author.fields.name}
-        // authorImage={post?.fields.author.fields.image.fields.file.url}
+        authorImage={authorImageUrl}  // Updated this line
         slug={post?.fields.slug}
         date={post?.fields.date}
         coverImage={post?.fields.coverImage.fields.file.url}
@@ -85,21 +90,28 @@ const Blog = ({ post, morePosts }) => {
           - Recent Entries -
         </Typography>
         <Grid container spacing={4} justifyContent="center">
-          {morePosts?.map(({ fields }) => (
-            <Grid item key={fields.slug} xs={12} md={4}>
-              <Grid container>
-                <MorePost
-                  title={fields.title}
-                  subtitle={fields.subTitle}
-                  authorName={fields.author.fields.name}
-                  // authorImage={fields.author.fields.image.fields.file.url}
-                  slug={fields.slug}
-                  date={fields.date}
-                  coverImage={fields.coverImage.fields.file.url}
-                />
+          {morePosts?.map(({ fields }) => {
+            // Extract image URL from the array
+            const morePostAuthorImageUrl = fields.author.fields.image.length > 0 
+              ? fields.author.fields.image[0].fields.file.url
+              : null;
+
+            return (
+              <Grid item key={fields.slug} xs={12} md={4}>
+                <Grid container>
+                  <MorePost
+                    title={fields.title}
+                    subtitle={fields.subTitle}
+                    authorName={fields.author.fields.name}
+                    authorImage={morePostAuthorImageUrl}  // Updated this line
+                    slug={fields.slug}
+                    date={fields.date}
+                    coverImage={fields.coverImage.fields.file.url}
+                  />
+                </Grid>
               </Grid>
-            </Grid>
-          ))}
+            );
+          })}
         </Grid>
       </Container>
     </Layout>
