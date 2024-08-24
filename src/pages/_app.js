@@ -1,24 +1,3 @@
-// import React from 'react';
-// import '../styles/globals.css';
-// import '../styles/app.css';
-// import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-// import { ThemeProvider as StyledThemeProvider } from "styled-components";
-// import theme from '../styles/theme';
-
-// const MyApp = ({ Component, pageProps }) => {
-//     return (
-//         <React.StrictMode>
-//             <MuiThemeProvider theme={theme}>
-//                 <StyledThemeProvider theme={theme}>
-//                     <Component {...pageProps} />
-//                 </StyledThemeProvider>
-//             </MuiThemeProvider>
-//         </React.StrictMode>
-//     );
-// };
-
-// export default MyApp;
-
 import React, { useEffect } from 'react';
 import '../styles/globals.css';
 import '../styles/app.css';
@@ -39,7 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
         TagManager.initialize(tagManagerArgs);
 
         const handleRouteChange = (url) => {
-            window.gtag('config', 'G-2Q2E77GN4D', { page_path: url }); // Replace with your GA tracking ID
+            window.gtag('config', 'G-2Q2E77GN4D', { page_path: url });
         };
         router.events.on('routeChangeComplete', handleRouteChange);
         return () => {

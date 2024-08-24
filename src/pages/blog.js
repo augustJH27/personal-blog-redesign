@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '160px',
     [theme.breakpoints.down("sm")]: {
       marginBottom: "80px",
-      marginTop: '20px',
+      marginTop: '60px',
     },
   },
 }));

@@ -21,14 +21,11 @@ import { routes } from '../../data/routes';
 const ToolbarMargin = styled.div`
   ${({ theme }) => css`
     ${theme.mixins.toolbar};
-    margin-bottom: 80px;
 
     @media (max-width: ${theme.breakpoints.values.md}px) {
-      margin-bottom: 72px;
     }
 
     @media (max-width: ${theme.breakpoints.values.xs}px) {
-      margin-bottom: 64px;
     }
   `}
 `;
