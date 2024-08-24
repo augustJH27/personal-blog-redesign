@@ -31,7 +31,6 @@ export default function Index({ posts }) {
         description="Blog"
       >
         <Container maxWidth="lg" className={classes.container}>
-          {/* you can delete this component or you can use this for your page header. */}
           <PageHeader />
           {/* blog post */}
           <Grid container spacing={4}>

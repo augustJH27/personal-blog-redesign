@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(180deg)",
   },
   paragraphText: {
-    fontFamily: "Raleway, sans-serif",
-    fontSize: '16px',
+    fontFamily: "Cardo",
+    fontSize: '18px',
     fontWeight: '400',
     lineHeight: '2',
   },
@@ -71,19 +71,19 @@ export default function Post({
           {subtitle.length > 80 ? subtitle.substr(0, 80) + "..." : subtitle}
           </Typography>
         </CardContent>
-        <CardHeader
-          // avatar={
-          //   <Avatar
-          //     aria-label="avatar image"
-          //     className={classes.avatar}
-          //     style={{
-          //       backgroundImage: `url(${authorImage})`,
-          //     }}
-          //   />
-          // }
+        {/* <CardHeader
+          avatar={
+            <Avatar
+              aria-label="avatar image"
+              className={classes.avatar}
+              style={{
+                backgroundImage: `url(${authorImage})`,
+              }}
+            />
+          }
           title={authorName}
           subheader={moment(date).format("MMMM Do YYYY")}
-        />
+        /> */}
       </Card>
     </Link>
   );

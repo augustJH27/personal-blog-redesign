@@ -54,6 +54,9 @@ const BlogHeader = ({
         <Grid item>
           <Typography variant="h3">{title}</Typography>
         </Grid>
+        <Grid item>
+          <Typography variant="body1">{subtitle}</Typography>
+        </Grid>
         <Grid item container wrap="nowrap" alignItems="center" spacing={3}>
           <Grid item>
             <Avatar
@@ -75,9 +78,6 @@ const BlogHeader = ({
         </Grid>
         <Grid item>
           <img src={coverImage} style={{ height: "auto", width: "100%" }} />
-        </Grid>
-        <Grid item>
-          <Typography variant="body1">{subtitle}</Typography>
         </Grid>
       </Grid>
     </Container>

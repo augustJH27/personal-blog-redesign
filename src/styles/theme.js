@@ -4,7 +4,7 @@ import { createTheme } from '@material-ui/core/styles'
 const mainBlack = "#000";
 const mainWhite = "#fff";
 const blue = "#225949";
-// Create a theme instance.
+
 const theme = createTheme({
   palette: {
     common: {
@@ -38,10 +38,19 @@ const theme = createTheme({
       lineHeight: '1.7',
     },
     p: {
-      fontFamily: "Raleway, sans-serif",
+      fontFamily: "Cardo, serif",
     },
     h3: {
-      fontFamily: 'Cardo, serif',
+      fontFamily: "Raleway, sans-serif",
+      fontSize: "44px",
+      fontWeight: 500,
+      '@media (max-width:480px)': {
+        fontSize: '32px',
+        lineHeight: '1.5',
+      },
+    },
+    subheading: {
+      fontFamily: "Cardo, serif",
       fontSize: "44px",
       fontWeight: 500,
       '@media (max-width:480px)': {

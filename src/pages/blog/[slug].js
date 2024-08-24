@@ -35,7 +35,6 @@ const Blog = ({ post, morePosts }) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  // Extract image URL from the array
   const authorImageUrl = post?.fields.author.fields.image.length > 0 
     ? post.fields.author.fields.image[0].fields.file.url
     : null;
@@ -51,14 +50,14 @@ const Blog = ({ post, morePosts }) => {
         title={post?.fields.title}
         subtitle={post?.fields.subTitle}
         authorName={post?.fields.author.fields.name}
-        authorImage={authorImageUrl}  // Updated this line
+        authorImage={authorImageUrl}
         slug={post?.fields.slug}
         date={post?.fields.date}
         coverImage={post?.fields.coverImage.fields.file.url}
       />
       <BlogBody content={post?.fields.content} />
       <Container maxWidth="lg" style={{ marginTop: "8em", marginBottom: '120px' }}>
-        <Grid container direction="column" alignItems="center">
+        {/* <Grid container direction="column" alignItems="center">
           <Grid item>
             <Typography
               align="center"
@@ -75,7 +74,7 @@ const Blog = ({ post, morePosts }) => {
               url={`https://joyagustian.vercel.app/blog/${post?.fields.slug}`}
             />
           </Grid>
-        </Grid>
+        </Grid> */}
         <Typography
           align="center"
           gutterBottom
@@ -83,7 +82,7 @@ const Blog = ({ post, morePosts }) => {
             fontFamily: "Raleway, sans-serif",
             fontSize: "1.5rem",
             fontWeight: "bold",
-            margin: "3em 0 1.5em",
+            margin: "2em 0 2em",
             borderBottom: "2px solid rgb(208 208 208)",
           }}
         >

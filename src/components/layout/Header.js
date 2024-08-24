@@ -1,9 +1,5 @@
-import Link from '../Link';
-import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
-
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import styled, { css } from 'styled-components';
 import {
   Grid,
   AppBar,
@@ -14,69 +10,82 @@ import {
   ListItemText,
   SwipeableDrawer,
   IconButton,
+  useScrollTrigger,
+  Hidden,
 } from '@material-ui/core';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import Link from '../Link';
+import { useRouter } from 'next/router';
 import { routes } from '../../data/routes';
+
+const ToolbarMargin = styled.div`
+  ${({ theme }) => css`
+    ${theme.mixins.toolbar};
+    margin-bottom: 80px;
+
+    @media (max-width: ${theme.breakpoints.values.md}px) {
+      margin-bottom: 72px;
+    }
+
+    @media (max-width: ${theme.breakpoints.values.xs}px) {
+      margin-bottom: 64px;
+    }
+  `}
+`;
+
+const DrawerIconContainer = styled(IconButton)`
+  margin-left: auto;
+  padding: 0;
+
+  &:hover {
+    background-color: #fff;
+  }
+`;
+
+const DrawerIcon = styled(MenuIcon)`
+  height: 50px;
+  width: 50px;
+  color: #000;
+
+  @media (max-width: 600px) {
+    height: 40px;
+    width: 40px;
+  }
+`;
+
+const StyledSwipeableDrawer = styled(SwipeableDrawer)`
+  .MuiDrawer-paper {
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    padding: 0 6em;
+  }
+`;
+
+const StyledTypography = styled(Typography)`
+  font-size: 1.25em;
+  font-family: 'Raleway';
+  font-weight: 500;
+  color: #000;
+`;
+
+const StyledAppBar = styled(AppBar)`
+  background-color: ${({ theme }) => theme?.palette?.background?.default};
+`;
 
 function ElevationScroll(props) {
   const { children } = props;
-  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
 
-  return React.cloneElement(children, { elevation: trigger ? 4 : 0 });
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
 }
 
-const useStyles = makeStyles((theme) => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '80px',
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '72px',
-    },
-  },
-  drawerIconContainer: {
-    marginLeft: 'auto',
-    padding: 0,
-    '&:hover': {
-      backgroundColor: '#fff',
-    },
-  },
-  drawerIcon: {
-    height: '50px',
-    width: '50px',
-    color: '#000',
-    [theme.breakpoints.down('xs')]: {
-      height: '40px',
-      width: '40px',
-    },
-  },
-  drawer: {
-    backgroundColor: theme.palette.primary.main,
-    padding: '0 6em',
-  },
-  link: {
-    fontSize: '1.25em',
-    fontFamily: 'Cardo',
-    color: '#000',
-  },
-  appBar: {
-    backgroundColor: theme.palette.background.default,
-  },
-}));
-
 const Header = () => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('sm'));
   const router = useRouter();
-
   const [openDrawer, setOpenDrawer] = useState(false);
-
-  const path = routes;
-
   const [iOS, setIOS] = useState(false);
 
   useEffect(() => {
@@ -85,20 +94,21 @@ const Header = () => {
     }
   }, []);
 
+  const path = routes;
+
   const tabs = (
     <Grid container justifyContent="center" spacing={4}>
       {path.map(({ name, link }) => (
         <Grid item key={link}>
           <Link href={link}>
-            <Typography
-              className={classes.link}
+            <StyledTypography
               style={{
                 fontWeight: router.pathname === link ? 'bold' : 'normal',
                 borderBottom: router.pathname === link ? '1px solid #3178C6' : 'none',
               }}
             >
               {name}
-            </Typography>
+            </StyledTypography>
           </Link>
         </Grid>
       ))}
@@ -107,16 +117,15 @@ const Header = () => {
 
   const drawer = (
     <>
-      <SwipeableDrawer
+      <StyledSwipeableDrawer
         disableBackdropTransition={!iOS}
         disableDiscovery={iOS}
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
-        classes={{ paper: classes.drawer }}
         anchor="right"
       >
-        <div className={classes.toolbarMargin} />
+        <ToolbarMargin />
         <List disablePadding>
           {path.map(({ name, link }) => (
             <ListItem
@@ -127,35 +136,34 @@ const Header = () => {
             >
               <ListItemText disableTypography>
                 <Link href={link}>
-                  <Typography
+                  <StyledTypography
                     style={{
-                      fontFamily: 'Cardo, serif',
                       color: router.pathname === link ? '#3178C6E2' : '#000',
                       fontWeight: router.pathname === link ? 'bold' : 'normal',
+                      textAlign: 'center',
                     }}
                   >
                     {name}
-                  </Typography>
+                  </StyledTypography>
                 </Link>
               </ListItemText>
             </ListItem>
           ))}
         </List>
-      </SwipeableDrawer>
-      <IconButton
+      </StyledSwipeableDrawer>
+      <DrawerIconContainer
         onClick={() => setOpenDrawer(!openDrawer)}
         disableRipple
-        className={classes.drawerIconContainer}
       >
-        <MenuIcon className={classes.drawerIcon} />
-      </IconButton>
+        <DrawerIcon />
+      </DrawerIconContainer>
     </>
   );
 
   return (
     <>
       <ElevationScroll>
-        <AppBar className={classes.appBar}>
+        <StyledAppBar>
           <Toolbar
             disableGutters
             style={{
@@ -163,7 +171,7 @@ const Header = () => {
               margin: '0 auto',
               width: '100%',
               height: '80px',
-              padding: matches ? '24px' : '48px',
+              padding: '24px',
             }}
           >
             <Link href="/">
@@ -178,11 +186,16 @@ const Header = () => {
                 </Grid>
               </Grid>
             </Link>
-            {matches ? drawer : tabs}
+            <Hidden mdDown>
+              {tabs}
+            </Hidden>
+            <Hidden lgUp>
+              {drawer}
+            </Hidden>
           </Toolbar>
-        </AppBar>
+        </StyledAppBar>
       </ElevationScroll>
-      <div className={classes.toolbarMargin} />
+      <ToolbarMargin />
     </>
   );
 };

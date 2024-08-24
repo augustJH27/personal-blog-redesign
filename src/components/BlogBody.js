@@ -23,9 +23,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'justify',
     "& p": {
       ...theme.typography.body1,
-      fontFamily: "Raleway, sans-serif",
+      fontFamily: "Cardo, serif",
       lineHeight: '2',
       marginBottom: '12px',
+      fontSize: '18px'
     },
     "& h1, h2, h3, h4, h5": {
       fontFamily: "Raleway, sans-serif",
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& img": {
       height: "auto",
-      width: "100%",
+      // width: "100%",
       margin: "1em 0",
       display: "block",
     },
