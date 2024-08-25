@@ -12,19 +12,29 @@ const MyApp = ({ Component, pageProps }) => {
     const router = useRouter();
 
     useEffect(() => {
-        const tagManagerArgs = {
-            gtmId: 'GTM-P4XNVJM9',
-        };
-        TagManager.initialize(tagManagerArgs);
+        TagManager.initialize({ gtmId: 'GTM-P4XNVJM9' });
 
         const handleRouteChange = (url) => {
             window.gtag('config', 'G-2Q2E77GN4D', { page_path: url });
+            trackVirtualPageview();
         };
+
+        trackVirtualPageview();
         router.events.on('routeChangeComplete', handleRouteChange);
+
         return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
         };
     }, [router.events]);
+
+    const trackVirtualPageview = () => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'virtualPageview',
+            pagePath: window.location.pathname,
+            pageTitle: document.title
+        });
+    };
 
     return (
         <React.StrictMode>

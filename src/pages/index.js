@@ -1,25 +1,3 @@
-// import React from 'react';
-// import Header from '../components/layout/Header';
-// import Footer from '../organisms/Footer';
-// // import AnimationBoxFirst from '../atoms/AnimationBox/AnimationBoxFirst';
-// // import AnimationBoxSecond from '../atoms/AnimationBox/AnimationBoxSecond';
-// import SEO from '../data/SEO';
-// import Blog from './blog';
-
-
-// const Main = () => {
-// 	return (
-// 		<div>
-// 			<SEO title='Joy Agustian | My Inner Thought' />
-// 			<Header />
-// 			<Blog />
-// 			<Footer />
-// 		</div>
-// 	);
-// };
-
-// export default Main;
-
 import Post from '../components/Post';
 import Layout from '../components/layout/Layout';
 import PageHeader from '../components/PageHeader';
@@ -33,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '160px',
     [theme.breakpoints.down("sm")]: {
       marginBottom: "80px",
-      marginTop: '20px',
+      marginTop: '60px',
     },
   },
 }));
