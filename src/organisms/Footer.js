@@ -295,3 +295,167 @@ function Footer() {
 }
 
 export default Footer;
+
+// import React from 'react';
+// import styled from 'styled-components';
+
+// const FooterContainer = styled.footer`
+//   background-color: #FFFDF9;
+//   padding-left: 80px;
+//   padding-right: 80px;
+//   padding-top: 64px;
+//   padding-bottom: 44px;
+//   text-align: center;
+//   font-family: 'Arial, sans-serif';
+// `;
+
+// const Logo = styled.div`
+//   display: flex;
+//   // align-items: center;
+//   // justify-content: center;
+//   margin-bottom: 32px;
+// `;
+
+// const LogoImage = styled.img`
+//   width: 262px;
+//   height: auto;
+// `;
+
+// const LogoText = styled.h1`
+//   font-size: 1.5rem;
+//   font-weight: 400;
+//   color: #333;
+// `;
+
+// const Tagline = styled.p`
+//   font-size: 20px;
+//   line-height: 36px;
+//   font-family: 'Raleway';
+//   font-weight: 300;
+//   color: #000000;
+//   margin-bottom: 20px;
+//   text-align: left;
+//   max-width: 420px;
+// `;
+
+// const SubscriptionSection = styled.div`
+//   margin-bottom: 20px;
+//   text-align: justify;
+// `;
+
+// const SubscriptionInput = styled.input`
+//   padding-left: 16px;
+//   padding-top: 11px;
+//   padding-bottom: 11px;
+//   font-family: 'Cardo';
+//   font-size: 20px;
+//   color: #000;
+//   margin-right: 12px;
+//   border: 1px solid #7F8084;
+//   width: 240px;
+//   border-radius: 8px;
+// `;
+
+// const SubscribeButton = styled.button`
+//   padding: 14px 20px;
+//   background-color: #A4B7AD;
+//   font-size: 20px;
+//   font-family: 'Raleway';
+//   font-weight: 600;
+//   color: #000;
+//   border: none;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: #C8F2DC;
+//   }
+// `;
+
+// const SiteMap = styled.div`
+//   margin: 20px 0;
+//   display: flex;
+//   justify-content: center;
+// `;
+
+// const SiteMapList = styled.ul`
+//   list-style: none;
+//   margin: 0 20px;
+//   padding: 0;
+// `;
+
+// const SiteMapItem = styled.li`
+//   margin: 8px 0;
+//   font-size: 20px;
+//   font-family: 'Raleway';
+//   line-height: 32px;
+//   color: #000;
+//   font-weight: 500;
+// `;
+
+// const ConnectSection = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 20px;
+// `;
+
+// const IconLink = styled.a`
+//   margin: 0 10px;
+//   color: #333;
+//   font-size: 1.5rem;
+// `;
+
+// const FooterBottom = styled.div`
+//   border-top: 1px solid #ccc;
+//   padding-top: 10px;
+//   font-size: 0.8rem;
+//   color: #666;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// `;
+
+// const Footer = () => {
+//   return (
+//     <FooterContainer>
+//       <Logo>
+//         <LogoImage src="./images/27-logo.svg" />
+//       </Logo>
+//       <Tagline>Thoughtful minds will haunt your bewildered imaginations at night.</Tagline>
+      
+//       <SubscriptionSection>
+//         <SubscriptionInput type="email" placeholder="Your email" />
+//         <SubscribeButton>Subscribe</SubscribeButton>
+//       </SubscriptionSection>
+      
+//       <SiteMap>
+//         <SiteMapList>
+//           <SiteMapItem>Home</SiteMapItem>
+//           <SiteMapItem>Blog</SiteMapItem>
+//           <SiteMapItem>Projects</SiteMapItem>
+//         </SiteMapList>
+//         <SiteMapList>
+//           <SiteMapItem>Review</SiteMapItem>
+//           <SiteMapItem>About</SiteMapItem>
+//           <SiteMapItem>Shop</SiteMapItem>
+//         </SiteMapList>
+//       </SiteMap>
+      
+//       <ConnectSection>
+//         <IconLink href="#"><i className="fab fa-instagram"></i></IconLink>
+//         <IconLink href="#"><i className="fab fa-twitter"></i></IconLink>
+//         <IconLink href="#"><i className="fab fa-pinterest"></i></IconLink>
+//         <IconLink href="#"><i className="fab fa-facebook"></i></IconLink>
+//         <IconLink href="#"><i className="fab fa-youtube"></i></IconLink>
+//       </ConnectSection>
+      
+//       <FooterBottom>
+//         <div>© 2024 Joy Agustian. All Rights Reserved</div>
+//         <div>
+//           <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-conditions">Terms and Conditions</a>
+//         </div>
+//       </FooterBottom>
+//     </FooterContainer>
+//   );
+// };
+
+// export default Footer;

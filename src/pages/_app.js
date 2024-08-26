@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }) => {
         TagManager.initialize({ gtmId: 'GTM-P4XNVJM9' });
 
         const handleRouteChange = (url) => {
-            window.gtag('config', 'G-2Q2E77GN4D', { page_path: url });
+            window.gtag('config', 'G-Z037FVWPQ0', { page_path: url });
             trackVirtualPageview();
         };
 
@@ -48,7 +48,7 @@ const MyApp = ({ Component, pageProps }) => {
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
-                            gtag('config', 'G-2Q2E77GN4D');
+                            gtag('config', 'G-Z037FVWPQ0');
                         `}
                     </Script>
                     <Component {...pageProps} />
