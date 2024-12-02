@@ -15,7 +15,7 @@ const CountDownTimer = () => {
 
   useEffect(() => {
     // Target date: November 30, 2024
-    const targetDate = new Date('2024-11-30T00:00:00.000Z'); // Note the 'Z' at the end to specify UTC time
+    const targetDate = new Date('2024-12-31T00:00:00.000Z'); // Note the 'Z' at the end to specify UTC time
 
     const updateTimer = () => {
       const now = new Date();
