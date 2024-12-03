@@ -15,7 +15,7 @@ const StyledCard = styled(Card)`
                 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     transform: translateY(-3px);
   }
-  color: blue;
+  color: #222222;
 `;
 
 const StyledCardMedia = styled(CardMedia)`

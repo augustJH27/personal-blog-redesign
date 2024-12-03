@@ -1,7 +1,9 @@
+import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import SEO from '../data/SEO';
 import Link from "./Link";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,20 +15,18 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: "800px",
     padding: theme.spacing(2),
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '100%',
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
       padding: "20px",
-      // padding: theme.spacing(1),
     },
   },
   blogBody: {
-    textAlign: 'justify',
+    textAlign: "justify",
     "& p": {
       ...theme.typography.body1,
       fontFamily: "Cardo, serif",
-      lineHeight: '2',
-      marginBottom: '12px',
-      fontSize: '18px'
+      lineHeight: "2",
+      fontSize: "18px",
     },
     "& h1, h2, h3, h4, h5": {
       fontFamily: "Raleway, sans-serif",
@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     },
     "& img": {
       height: "auto",
-      // width: "100%",
       margin: "1em 0",
       display: "block",
     },
@@ -51,15 +50,25 @@ const BlogBody = ({ content }) => {
   const classes = useStyles();
   const options = {
     renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => {
+        const content = node.content.map((child) => child.value).join("").trim();
+        const isEmpty = content === "";
+        const hasBreaks = node.content.some((child) => child.value?.includes("\n"));
+  
+        return (
+          <p
+            style={{
+              marginBottom: isEmpty || hasBreaks ? "40px" : "8px",
+              lineHeight: hasBreaks ? "1.5" : "2",
+            }}
+          >
+            {children}
+          </p>
+        );
+      },
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const { url, fileName } = node.data.target.fields.file;
-        return (
-          <img
-            src={url}
-            alt={fileName}
-            className={classes.image}
-          />
-        );
+        return <img src={url} alt={fileName} className={classes.image} />;
       },
       [INLINES.HYPERLINK]: (node) => {
         const { uri } = node.data;
@@ -72,6 +81,7 @@ const BlogBody = ({ content }) => {
       },
     },
   };
+  
 
   return (
     <Container className={classes.root}>
