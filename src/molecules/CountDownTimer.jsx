@@ -14,12 +14,11 @@ const CountDownTimer = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    // Target date: November 30, 2024
-    const targetDate = new Date('2024-12-31T00:00:00.000Z'); // Note the 'Z' at the end to specify UTC time
+    const targetDate = new Date('2025-02-27T00:00:00.000Z');
 
     const updateTimer = () => {
       const now = new Date();
-      const timeRemaining = targetDate.getTime() - now.getTime(); // Use getTime() to get the timestamp in milliseconds
+      const timeRemaining = targetDate.getTime() - now.getTime();
 
       if (timeRemaining > 0) {
         const calculatedDays = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
@@ -39,16 +38,13 @@ const CountDownTimer = () => {
       }
     };
 
-    // Initial call to set the countdown
     updateTimer();
 
-    // Update the countdown every second
     const intervalId = setInterval(() => {
       updateTimer();
       SecondsCardRef.current.classList.toggle('rotate');
     }, 1000);
 
-    // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
 
