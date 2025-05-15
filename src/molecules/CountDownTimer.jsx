@@ -14,7 +14,7 @@ const CountDownTimer = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date('2025-02-27T00:00:00.000Z');
+    const targetDate = new Date('2025-06-31T00:00:00.000Z');
 
     const updateTimer = () => {
       const now = new Date();
